@@ -48,3 +48,8 @@ buildscript {
         classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.3'
     }
 }
+
+// exclude SLF4j bindings to log4j
+configurations.all {
+   exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+}
